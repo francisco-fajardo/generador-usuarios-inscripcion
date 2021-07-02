@@ -12,9 +12,11 @@ class App:
     data_dir = "data"
     db_file = os.path.join(data_dir, "database.db")
 
+    version = "v1.0.0"
+
     def __init__(self, window):
         self.window = window
-        self.window.title("Generador de usuarios")
+        self.window.title("Generador de usuarios {}".format(self.version))
 
         if (os.path.exists(self.data_dir) is False):
             os.mkdir(self.data_dir)
