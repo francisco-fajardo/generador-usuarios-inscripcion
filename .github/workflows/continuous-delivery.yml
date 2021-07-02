@@ -57,7 +57,7 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
                   upload_url: ${{ steps.create_release.outputs.upload_url }}
-                  asset_path: app/app.py
+                  asset_path: app.py
                   asset_name: app.py
                   asset_content_type: text/x-python
 
