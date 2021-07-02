@@ -104,6 +104,7 @@ class App:
         self.message["text"] = "Usuario: {}\nContraseña: {}".format(cedula, password)
         self.cedula.delete(0, END)
         self.get_users()
+        self.update_users_total()
 
     def delete_user(self):
         try:
@@ -117,6 +118,7 @@ class App:
         self.run_query(query, (cedula,))
         self.message["text"] = "Usuario eliminado satisfactoriamente"
         self.get_users()
+        self.update_users_total()
 
     def get_users(self):
         # cleaning table
@@ -144,6 +146,9 @@ class App:
         result = self.run_query(query)
 
         return len(result.fetchall())
+
+    def update_users_total(self):
+        self.users_total["text"] = "Usuarios totales: {}".format(self.count_users())
 
 if __name__ == "__main__":
     window = Tk()
