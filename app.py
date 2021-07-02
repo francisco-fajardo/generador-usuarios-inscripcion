@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 from tkinter import ttk
 from tkinter import *
@@ -146,7 +147,6 @@ class App:
 
 if __name__ == "__main__":
     window = Tk()
-    window.wm_iconbitmap("assets/favicon.ico")
     window.geometry("405x470")
     application = App(window)
     window.mainloop()
