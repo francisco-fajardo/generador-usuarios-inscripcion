@@ -117,9 +117,6 @@ class App:
         self.message["text"] = "Usuario eliminado satisfactoriamente"
         self.get_users()
 
-    def edit_user(self):
-        return
-
     def get_users(self):
         # cleaning table
         records = self.tree.get_children()
