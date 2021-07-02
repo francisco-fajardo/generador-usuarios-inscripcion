@@ -3,10 +3,8 @@
 from tkinter import ttk
 from tkinter import *
 
-from PIL import ImageTk, Image
 import secrets
 import string
-import csv
 import os
 import sqlite3
 
@@ -39,12 +37,6 @@ class App:
             self.conn = sqlite3.connect(self.db_file)
         except Error as e:
             return
-
-        # Logo
-        #img = ImageTk.PhotoImage(Image.open("assets/logo.png"))
-        #imgLabel = Label(self.window, image = img)
-        #imgLabel.image = img
-        #imgLabel.grid(row = 0, column = 0)
 
         frame = LabelFrame(self.window, text = "Registrar un nuevo usuario")
         frame.grid(row = 0, column = 0, columnspan=1, padx=10, pady=10, sticky= W + E)
